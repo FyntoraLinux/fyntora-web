@@ -17,17 +17,17 @@
 </head>
 <body class="{% if user.is_authenticated %}devmode {% endif %}{% block bodyclass %}{% endblock %}">
     <div id="archnavbar" class="{% block navbarclass %}anb-home{% endblock %}">
-        <div id="archnavbarlogo"><h1><a href="/" title="Return to the main page">Arch Linux</a></h1></div>
+        <div id="archnavbarlogo"><h1><a href="/" title="Return to the main page">Fyntora Linux</a></h1></div>
         <div id="archnavbarmenu">
             <ul id="archnavbarlist">
-                <li id="anb-home"><a href="/" title="Arch news, packages, projects and more">Home</a></li>
-                <li id="anb-packages"><a href="/packages/" title="Arch Package Database">Packages</a></li>
+                <li id="anb-home"><a href="/" title="Fyntora news, packages, projects and more">Home</a></li>
+                <li id="anb-packages"><a href="/packages/" title="Package Database">Packages</a></li>
                 <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li>
                 <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li>
-                <li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux" title="GitLab">GitLab</a></li>
-                <li id="anb-security"><a href="https://security.archlinux.org/" title="Arch Linux Security Tracker">Security</a></li>
-                <li id="anb-aur"><a href="https://aur.archlinux.org/" title="Arch Linux User Repository">AUR</a></li>
-                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get Arch Linux">Download</a></li>
+                <li id="anb-gitlab"><a href="https://github.com/FyntoraLinux" title="GitLab">GitHub</a></li>
+                <li id="anb-security"><a href="https://security.archlinux.org/" title="Fyntora Linux Security Tracker">Security</a></li>
+                <li id="anb-aur"><a href="https://aur.archlinux.org/" title="Fyntora Linux User Repository">AUR</a></li>
+                <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get FyntoraLinux">Download</a></li>
             </ul>
         </div>
     </div>
@@ -36,8 +36,6 @@
             {% if user.is_authenticated %}
                 <ul>
                     <li><a href="{% url 'devel-index' %}" title="Developer Dashboard">Dashboard</a></li>
-                    <li><a href="https://wiki.archlinux.org/title/DeveloperWiki"
-                        title="Developer Wiki">DevWiki</a></li>
                     <li><a href="{% url 'news-list' as newsl %}{{ newsl }}" title="Manage news articles">News</a></li>
                     <li><a href="/packages/signoffs/" title="Package signoffs">Signoffs</a></li>
                     <li><a href="/todo/" title="Developer todo lists">Todos</a></li>
@@ -81,14 +79,8 @@
             </div>
         {% endblock %}
         <div id="footer">
-            <p>Copyright © 2002-{% now "Y" %} <a href="mailto:jvinet@zeroflux.org"
-                title="Contact Judd Vinet">Judd Vinet</a>, <a href="mailto:aaron@archlinux.org"
-                title="Contact Aaron Griffin">Aaron Griffin</a> and
-                <a href="mailto:anthraxx@archlinux.org" title="Contact Levente Polyák">Levente Polyák</a>.</p>
-
-            <p>The Arch Linux name and logo are recognized
-            <a href="https://terms.archlinux.org/docs/trademark-policy/"
-                title="Arch Linux Trademark Policy">trademarks</a>. Some rights reserved.</p>
+            <p>Copyright © 2025-{% now "Y" %} <a href="mailto:allexander@fyntoralinux.com"
+                title="Contact Allexabder B">Allexander B</a></p>
 
             <p>The registered trademark Linux® is used pursuant to a sublicense from LMI,
             the exclusive licensee of Linus Torvalds, owner of the mark on a world-wide basis.</p>

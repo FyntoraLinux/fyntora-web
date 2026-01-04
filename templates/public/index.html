@@ -12,25 +12,17 @@
 {% block content_left %}
 {% cache 62 main-page-left %}
 <div id="intro" class="box">
-    <h2>A simple, lightweight distribution</h2>
+    <h2>A simple, yet amazing, Arch Based distribution</h2>
 
-    <p>You've reached the website for <strong>Arch Linux</strong>, a
+    <p>You've reached the website for <strong>Fyntora Linux</strong>, a
     lightweight and flexible Linux® distribution that tries to Keep It
-    Simple.</p>
+    Simple. Based on Arch Linux.</p>
 
-    <p>Currently we have official packages optimized for the x86-64
+    <p>Currently we have like ArchLinux, official packages optimized for the x86-64
     architecture. We complement our official package sets with a
     <a href="https://aur.archlinux.org/" title="Arch User Repository (AUR)">
         community-operated package repository</a> that grows in size and
     quality each and every day.</p>
-
-    <p>Our strong community is diverse and helpful, and we pride ourselves
-    on the range of skillsets and uses for Arch that stem from it. Please
-    check out our <a href="https://bbs.archlinux.org/" title="Arch Forums">forums</a>
-    and <a href="https://lists.archlinux.org/" title="Arch Mailing Lists">mailing lists</a>
-    to get your feet wet. Also glance through our <a href="https://wiki.archlinux.org/"
-        title="Arch Wiki">wiki</a>
-    if you want to learn more about Arch.</p>
 
     <p class="readmore"><a href="{% url 'page-about' %}"
         title="Learn more about Arch Linux">Learn more...</a></p>
@@ -118,26 +110,6 @@
             title="Installation guide">Installation Guide</a></li>
     </ul>
 
-    <h4>Community</h4>
-    <ul>
-        <li><a href="https://lists.archlinux.org/"
-            title="Community and developer mailing lists">Mailing Lists</a></li>
-        <li><a href="https://wiki.archlinux.org/title/IRC_channels"
-            title="Official and regional IRC communities">IRC Channels</a></li>
-        <li><a href="https://planet.archlinux.org/"
-            title="Arch in the blogosphere">Planet Arch</a></li>
-        <li><a href="https://wiki.archlinux.org/title/International_communities"
-            title="Arch communities in your native language">International Communities</a></li>
-    </ul>
-
-    <h4>Support</h4>
-    <ul>
-        <li><a href="{% url 'page-donate' %}" title="Help support Arch Linux">Donate</a></li>
-        <li><a href="https://www.freewear.org/?page=list_items&amp;org=Archlinux"
-            title="T-shirts">T-shirts via Freewear</a></li>
-        <li><a href="https://www.hellotux.com/arch"
-            title="T-shirts">T-shirts via HELLOTUX</a></li>
-    </ul>
 
     <h4>Tools</h4>
     <ul>
@@ -181,30 +153,10 @@
 
     <h4>More Resources</h4>
     <ul>
-        <li><a href="https://wiki.archlinux.org/title/Arch_Linux_press_coverage"
-            title="Arch Linux in the media">Press Coverage</a></li>
-        <li><a href="{% url 'page-art' %}" title="Arch logos and other artwork for promotional use">Logos &amp; Artwork</a></li>
         <li><a href="{% url 'news-list' %}" title="News Archives">News Archives</a></li>
         <li><a href="/feeds/" title="Various RSS Feeds">RSS Feeds</a></li>
     </ul>
 </div>
 
-<div id="home-donate-button" class="widget">
-    <a href="https://co.clickandpledge.com/Default.aspx?WID=47294">
-        <img src="{% static "click_and_pledge.png" %}" alt="Donate via Click&amp;Pledge to Arch Linux" title="Donate via Click&amp;Pledge to Arch Linux"/>
-    </a>
-</div>
-
-<div class="widget">
-    <a href="https://www.hetzner.com" title="Dedicated Root Server, VPS &amp; Hosting - Hetzner Online GmbH">
-        <img src="{% static "hetzner_logo.png" %}"
-            title="" alt="Hetzner logo"/>
-    </a>
-
-    <a href="https://icons8.com/" title="Icons8">
-        <img src="{% static "icons8_logo.png" %}"
-            title="" alt="Icons8 logo"/>
-    </a>
-</div>
 {% endcache %}
 {% endblock %}
