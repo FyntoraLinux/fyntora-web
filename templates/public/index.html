@@ -34,8 +34,9 @@
         <span class="arrow"></span>
     </h3>
 
-    <a href="/feeds/news/" title="Arch News RSS Feed"
-        class="rss-icon"><img src="{% static "rss.svg" %}" alt="RSS Feed" /></a>
+    <!-- THINK: Should we enable this again? -->
+    <!-- <a href="/feeds/news/" title="Arch News RSS Feed"
+        class="rss-icon"><img src="{% static "rss.svg" %}" alt="RSS Feed" /></a> -->
 
     {% for news in news_updates %}{% if forloop.counter0 < 5 %}
     <h4>
@@ -100,7 +101,7 @@
 
 {% cache 115 main-page-right %}
 <div id="nav-sidebar" class="widget">
-    <h4>Documentation</h4>
+    <!-- <h4>Documentation</h4>
     <ul>
         <li><a href="https://wiki.archlinux.org/"
             title="Community documentation">Wiki</a></li>
@@ -108,7 +109,7 @@
             title="All manpages from Arch packages">Manual Pages</a></li>
         <li><a href="https://wiki.archlinux.org/title/Installation_guide"
             title="Installation guide">Installation Guide</a></li>
-    </ul>
+    </ul> -->
 
 
     <h4>Tools</h4>
@@ -123,13 +124,14 @@
 
     <h4>Development</h4>
     <ul>
-        <li><a href="https://wiki.archlinux.org/title/Getting_involved"
+        <!-- TODO: make integrated pages, within this site, for those. -->
+        <!-- <li><a href="https://wiki.archlinux.org/title/Getting_involved"
             title="Getting involved">Getting involved</a></li>
         <li><a href="https://devblog.archlinux.page" title="Dev Blog">Dev Blog</a></li>
         <li><a href="https://gitlab.archlinux.org/archlinux/"
             title="Official Arch projects (git)">Projects in Git</a></li>
         <li><a href="https://wiki.archlinux.org/title/DeveloperWiki"
-            title="Developer Wiki articles">Developer Wiki</a></li>
+            title="Developer Wiki articles">Developer Wiki</a></li> -->
         <li><a href="/groups/"
             title="View the available package groups">Package Groups</a></li>
         <li><a href="/todo/"

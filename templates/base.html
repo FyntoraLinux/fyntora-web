@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="theme-color" content="#08C" />
-    <title>{% block title %}Arch Linux{% endblock %}</title>
+    <title>{% block title %}Fyntora Linux{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static "archweb.css" %}" media="screen" />
     <link rel="icon" type="image/png" href="{% static "favicon.png" %}" />
     <link rel="shortcut icon" type="image/png" href="{% static "favicon.png" %}" />
@@ -22,10 +22,12 @@
             <ul id="archnavbarlist">
                 <li id="anb-home"><a href="/" title="Fyntora news, packages, projects and more">Home</a></li>
                 <li id="anb-packages"><a href="/packages/" title="Package Database">Packages</a></li>
-                <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li>
-                <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li>
-                <li id="anb-gitlab"><a href="https://github.com/FyntoraLinux" title="GitLab">GitHub</a></li>
-                <li id="anb-security"><a href="https://security.archlinux.org/" title="Fyntora Linux Security Tracker">Security</a></li>
+                <!-- <li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li> -->
+                 <!-- TODO: Make the WIKI an internal page. -->
+                <!-- <li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li> -->
+                <li id="anb-gitlab"><a href="https://github.com/FyntoraLinux" title="GitHub" target="_blank">GitHub</a></li>
+                <!-- TODO: Make this an internal page. -->
+                <!-- <li id="anb-security"><a href="https://security.archlinux.org/" title="Fyntora Linux Security Tracker">Security</a></li> -->
                 <li id="anb-aur"><a href="https://aur.archlinux.org/" title="Fyntora Linux User Repository">AUR</a></li>
                 <li id="anb-download"><a href="{% url 'page-download' as pdl %}{{ pdl }}" title="Get FyntoraLinux">Download</a></li>
             </ul>
@@ -80,7 +82,7 @@
         {% endblock %}
         <div id="footer">
             <p>Copyright © 2025-{% now "Y" %} <a href="mailto:allexander@fyntoralinux.com"
-                title="Contact Allexabder B">Allexander B</a></p>
+                title="Contact Allexander B">Allexander B</a></p>
 
             <p>The registered trademark Linux® is used pursuant to a sublicense from LMI,
             the exclusive licensee of Linus Torvalds, owner of the mark on a world-wide basis.</p>
