@@ -1,57 +1,40 @@
 {% extends "base.html" %}
-{% block title %}Arch Linux - About{% endblock %}
+{% block title %}Fyntora Linux - About{% endblock %}
 {% block content %}
 <div class="box">
-    <h2 class="title">About Arch Linux</h2>
+    <h2 class="title">About Fyntora Linux</h2>
 <p>
-Arch Linux is an independently developed, x86-64 general purpose GNU/Linux
-distribution versatile enough to suit any role. Development focuses on
-simplicity, minimalism, and code elegance. Arch is installed as a
-minimal base system, configured by the user upon which their own ideal
-environment is assembled by installing only what is required or desired
-for their unique purposes. GUI configuration utilities are not officially
-provided, and most system configuration is performed from the shell by editing
-simple text files.  Arch strives to stay bleeding edge, and typically offers
-the latest stable versions of most software.
+Fyntora Linux is a distribution built on the foundation of Arch Linux.
+While we share the same core goals as Arch, we approach them from a distinct perspective. This isn't about being "better", at all. It's about doing things differently.
+
 </p>
 <p>
-Arch Linux uses its own Pacman package manager, which couples simple binary
-packages with an easy-to-use package build system. This allows users to
-easily manage and customize packages ranging from official Arch software to the
-user's own personal packages to packages from 3rd party sources. The repository
-system also allows users to easily build and maintain their own custom build
-scripts, packages, and repositories, encouraging community growth and
-contribution.
+Like ArchLinux, we currently use the Pacman package manager. For more information
+regarding the package manager, please head to <link>https://archlinux.org/about/.
+We would like to mention that we are addionally writing our own package-manager.
+This does not mean we will drop support for Pacman, Pacman remains the number one choice,
+as it is simply the best.
 </p>
 <p>
-The minimal Arch base package set resides in the streamlined [core] repository.
-In addition, the official [extra], [extra-testing], and [core-testing] repositories
-provide several thousand high-quality packages to meet your software demands.
-Arch also offers the Arch Linux User Repository (AUR), which contains more than
-49,000 build scripts, for compiling installable packages from source using the
-Arch Linux makepkg application.
+We are build on top the minimal, baseline configuration, making sure that
+you can configure your entire system yourself, with pre-installation scripts
+available. We give you max control about your system. The scripts can be downloaded
+from our mirror, or from our GitHub.
 </p>
 <p>
-Arch Linux uses a "rolling release" system which allows one-time installation
+Like Arch Linux, FyntoraLinux uses a "rolling release" system which allows one-time installation
 and perpetual software upgrades. It is not generally necessary to reinstall
-or upgrade your Arch Linux system from one "version" to the next.
-By issuing one command, an Arch system is kept up-to-date and on the bleeding
+or upgrade your Fyntora Linux system from one "version" to the next.
+By issuing one command, an Fyntora system is kept up-to-date and on the bleeding
 edge.
 </p>
 <p>
-Arch strives to keep its packages as close to the original upstream software as
-possible. Patches are applied only when necessary to ensure an application
-compiles and runs correctly with the other packages installed on an up-to-date
-Arch system.
+FyntoraLinux is currently making progress with their own Linux Kernel
+fork, this fork benifits the same mainstream futures, with addional updates.
+We have decided to do so to take your control to the next level. You can decide
+which kernel you would like to use within the installer.
 </p>
-<p>
-To summarize: Arch Linux is a versatile, and simple distribution designed to
-fit the needs of the competent Linux&#0174; user. It is both powerful and easy
-to manage, making it an ideal distro for servers and workstations.  Take it in
-any direction you like. If you share this vision of what a GNU/Linux
-distribution should be, then you are welcomed and encouraged to use it freely,
-get involved, and contribute to the community. Welcome to Arch!
-</p>
+
 </div>
 <br /><br />
 {% endblock %}

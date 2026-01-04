@@ -4,11 +4,11 @@
 {% load flags %}
 {% load pgp %}
 
-{% block title %}Arch Linux - Downloads{% endblock %}
+{% block title %}Fyntora Linux - Downloads{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static "flags/fam.css" %}" media="screen" />
-<link rel="alternate" type="application/rss+xml" title="Arch Linux Releases" href="/feeds/releases/" />
+<link rel="alternate" type="application/rss+xml" title="Fyntora Linux Releases" href="/feeds/releases/" />
 {% endblock %}
 
 {% block navbarclass %}anb-download{% endblock %}
@@ -16,30 +16,30 @@
 {% block content %}
 <div id="arch-downloads" class="box">
 
-    <h2>Arch Linux Downloads</h2>
+    <h2>Fyntora Linux Downloads</h2>
 
     <h3>Release Info</h3>
 
     <p>The image can be burned to a DVD, mounted as an ISO file,
     or be <a href="https://wiki.archlinux.org/title/USB_flash_installation_medium">directly written to a USB flash drive</a>.
-    It is intended for new installations only; an existing Arch Linux system
+    It is intended for new installations only; an existing Fyntora Linux system
     can always be updated with <code>pacman -Syu</code>.</p>
 
-    <p>Images for installing Arch can be downloaded via <a href="#bittorrent-download">BitTorrent</a> or right here in your browser from one of the <a href="#http-downloads">Arch HTTP(S) mirrors down below</a>.</p>
+    <p>Images for installing FyntoraLinux can be downloaded via <a href="#bittorrent-download">BitTorrent</a> or right here in your browser from one of the <a href="#http-downloads">Fyntora HTTP(S) mirrors down below</a>.</p>
 
     <ul>
         {% if release.version %}<li><strong>Current Release:</strong> {{ release.version }}</li>{% endif %}
         {% if release.kernel_version %}<li><strong>Included Kernel:</strong> {{ release.kernel_version }}</li>{% endif %}
         {% if release.torrent_data %}<li><strong>ISO Size:</strong> {{ release.torrent.file_length|filesizeformat }}</li>{% endif %}
         <li><a href="https://wiki.archlinux.org/title/Installation_guide">Installation Guide</a></li>
-        <li><strong>Resources:</strong>
+        <!-- <li><strong>Resources:</strong>
             <ul>
                 <li><a href="https://gitlab.archlinux.org/archlinux/archiso/-/issues"
                     title="Arch Linux Gitlab:Archiso">Issue tracker</a></li>
                 <li><a href="https://lists.archlinux.org/mailman3/lists/arch-releng.lists.archlinux.org/"
                     title="Arch Linux Release Engineering mailing list">Mailing List</a></li>
             </ul>
-        </li>
+        </li> -->
     </ul>
 
     {% if release.info %}
@@ -48,9 +48,9 @@
     <div class="article-content">{{ release.info_html }}</div>
     {% endif %}
 
-    <h3>Existing Arch Users</h3>
+    <h3>Existing FyntoraLinux Users</h3>
 
-    <p>If you are an existing Arch user, there is no need to download a new ISO
+    <p>If you are an existing FyntoraLinux user, there is no need to download a new ISO
     to update your existing system. You may be looking for
     <a href="{% url 'mirrorlist' %}">an updated mirrorlist</a> instead.</p>
 
@@ -69,15 +69,15 @@
             title="Download torrent">Torrent for {{ release.version }}<img width="12" height="12" src="{% static "download.png" %}" alt=""/></a></li>
     </ul>{% endif %}
 
-    <h3>Netboot</h3>
+    <!-- <h3>Netboot</h3>
 
     <p>If you have a wired connection, you can boot the latest release directly over the network.</p>
     <ul>
         <li><a href="{% url 'releng-netboot-info' %}"
             title="Arch Linux Netboot">Arch Linux Netboot</a></li>
-    </ul>
+    </ul> -->
 
-    <h3>Docker image</h3>
+    <!-- <h3>Docker image</h3>
 
     <p>The official Docker image is available on <a href="https://hub.docker.com/_/archlinux/">Docker Hub</a>. You can run the image with the following command:</p>
     <code>docker run -it archlinux</code>
@@ -92,7 +92,7 @@
     <code>wsl --install archlinux</code>
 
     <p>It is also available for download on <a href="https://fastly.mirror.pkgbuild.com/wsl/latest">mirrors</a>.</p>
-    <p>More information available in the <a href="https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL">Wiki</a>.</p>
+    <p>More information available in the <a href="https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL">Wiki</a>.</p> -->
 
     <h3 id="http-downloads">HTTP Direct Downloads</h3>
 
@@ -102,8 +102,9 @@
 
     <h4 id="checksums">Checksums and signatures</h4>
     <p>File integrity checksums and PGP signatures for the latest releases can be found below:</p>
+    <h3>SOON</h3>
 
-    <ul>
+    <!-- <ul>
         <li>ISO
             <ul>
                 <li><a href="https://archlinux.org/{{ release.iso_url }}.sig"
@@ -121,11 +122,12 @@
                     title="Bootstrap tarball PGP signature">PGP signature</a></li>
             </ul>
         </li>
+        <h3></h3>
         {% if release.sha256_sum %}<li><a href="https://archlinux.org/{{ release.dir_url }}/sha256sums.txt">sha256sums.txt</a></li>{% endif %}
         {% if release.b2_sum %}<li><a href="https://archlinux.org/{{ release.dir_url }}/b2sums.txt">b2sums.txt</a></li>{% endif %}
         {% if release.sha1_sum %}<li><a href="https://archlinux.org/{{ release.dir_url }}/sha1sums.txt">sha1sums.txt</a></li>{% endif %}
         {% if release.md5_sum %}<li><a href="https://archlinux.org/{{ release.dir_url }}/md5sums.txt">md5sums.txt</a></li>{% endif %}
-    </ul>
+    </ul> -->
 
     <h5>Download verification</h5>
 
@@ -136,12 +138,12 @@
     <pre><code>$ sq network wkd search {{ release.wkd_email }} --output release-key.pgp</code></pre>
 
     With this signing key, verify the signature:
-    <pre><code>$ sq verify --signer-file release-key.pgp --signature-file archlinux-{{ release.version }}-x86_64.iso.sig archlinux-{{ release.version }}-x86_64.iso</code></pre>
+    <pre><code>$ sq verify --signer-file release-key.pgp --signature-file fyntora-{{ release.version }}-x86_64.iso.sig fyntora-{{ release.version }}-x86_64.iso</code></pre>
 
     Alternatively, using GnuPG, download the signing key from WKD:
     <pre><code>$ gpg --auto-key-locate clear,wkd -v --locate-external-key {{ release.wkd_email }}</code></pre>
     Verify the signature:
-    <pre><code>$ gpg --verify archlinux-{{ release.version }}-x86_64.iso.sig archlinux-{{ release.version }}-x86_64.iso</code></pre>
+    <pre><code>$ gpg --verify fyntora-{{ release.version }}-x86_64.iso.sig fyntora-{{ release.version }}-x86_64.iso</code></pre>
 
     {% cache 600 download-mirrors %}
     <div id="download-mirrors">
@@ -159,8 +161,9 @@
     </div>
     {% endcache %}
 
-    <p>If you want to become an Official Arch Linux Mirror please follow the
-    instructions listed <a href="https://wiki.archlinux.org/title/DeveloperWiki:NewMirrors">here</a>.</p>
+    <p>If you want to become an Official Fyntora Linux Mirror please follow the instruction that
+        will be available soon.
+    <!-- instructions listed <a href="https://wiki.archlinux.org/title/DeveloperWiki:NewMirrors">here</a>.</p> -->
 
 </div>
 {% endblock %}
