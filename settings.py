@@ -3,7 +3,7 @@ import sys
 from os import path
 
 # Set the debug values
-DEBUG = False
+DEBUG = True
 DEBUG_TOOLBAR = False
 
 # Export prometheus metrics
